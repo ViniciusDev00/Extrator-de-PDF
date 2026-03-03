@@ -23,6 +23,7 @@
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
+    flex-direction: column; /* NOVA LINHA: Garante que o contentor e o rodapé ficam empilhados */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -40,6 +41,7 @@ body {
     text-align: center;
 }
 
+/* --- REGRAS DO CABEÇALHO --- */
 .header {
     display: flex;
     justify-content: center; 
@@ -52,13 +54,13 @@ body {
 
 .header-text-block {
     text-align: center; 
-    margin-right: 230px; 
+    margin-right: 100px; 
 }
 
 .header-text-block h2 {
     color: var(--primary-color);
     margin-bottom: 5px;
-    font-size: 32px; 
+    font-size: 28px; 
     font-weight: 700;
     letter-spacing: -0.5px;
 }
@@ -69,15 +71,16 @@ body {
     font-weight: 500;
 }
 
+/* CONTAINER DA LOGO */
 .logo-container {
-    width: 170px; 
-    height: 40px; 
+    width: 80px; 
+    height: 80px; 
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute; 
-    right: 0; 
-    top: calc(50% - 30px); 
+    right: 10px; 
+    top: calc(50% - 40px); 
 }
 
 .company-logo {
@@ -86,6 +89,7 @@ body {
     object-fit: contain;
 }
 
+/* Área de Upload */
 .upload-area {
     margin-bottom: 25px;
 }
@@ -131,6 +135,7 @@ body {
     color: var(--text-muted);
 }
 
+/* Lista de arquivos selecionados */
 .file-list {
     margin-top: 15px;
     font-size: 13px;
@@ -166,6 +171,7 @@ body {
     gap: 10px;
 }
 
+/* GRUPO DE BOTÕES */
 .button-group {
     display: flex;
     gap: 15px;
@@ -196,6 +202,7 @@ button:active {
     transform: scale(0.98);
 }
 
+/* Botão Específico PDF */
 .btn-pdf {
     background: var(--danger-color);
     box-shadow: 0 5px 15px rgba(220, 53, 69, 0.15);
@@ -212,4 +219,25 @@ button:active {
     font-weight: 600;
     color: var(--primary-color);
     min-height: 20px;
+}
+
+/* --- REGRAS DO NOVO RODAPÉ --- */
+.system-footer {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: opacity var(--transition-speed);
+}
+
+.system-footer:hover {
+    opacity: 1;
+}
+
+.system-footer strong {
+    color: var(--primary-color);
+    font-weight: 600;
 }
