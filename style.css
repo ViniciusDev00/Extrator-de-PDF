@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #0056b3;
+    --primary-hover: #004494;
+    --success-color: #28a745;
+    --success-hover: #218838;
+    --danger-color: #dc3545;
+    --danger-hover: #c82333;
+    --bg-start: #f0f2f5;
+    --bg-end: #dde1e7;
+    --container-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #6c757d;
+    --border-color: #e0e0e0;
+    --transition-speed: 0.2s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+    padding: 20px;
+}
+
+.container {
+    background: var(--container-bg);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative; 
+}
+
+.header-text-block {
+    text-align: center; 
+    margin-right: 230px; 
+}
+
+.header-text-block h2 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 32px; 
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.header-text-block p {
+    color: var(--text-muted);
+    font-size: 14px; 
+    font-weight: 500;
+}
+
+.logo-container {
+    width: 170px; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    right: 0; 
+    top: calc(50% - 30px); 
+}
+
+.company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.upload-area {
+    margin-bottom: 25px;
+}
+
+#pdfInput {
+    display: none;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #fbfcfd;
+    border: 2px dashed #d0d7de;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.upload-label:hover {
+    border-color: var(--primary-color);
+    background-color: #eef5ff;
+    box-shadow: 0 4px 12px rgba(0,86,179,0.05);
+}
+
+.upload-icon {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.upload-text {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.upload-hint {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.file-list {
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: left;
+    max-height: 120px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.file-list::-webkit-scrollbar {
+    width: 4px;
+}
+.file-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.file-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.file-list p {
+    margin-bottom: 6px;
+    padding: 8px 12px;
+    background: #f3f5f7;
+    border-radius: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+button {
+    flex: 1;
+    background: var(--success-color);
+    color: white;
+    border: none;
+    padding: 16px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: background var(--transition-speed), transform 0.1s, box-shadow var(--transition-speed);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.15);
+}
+
+button:hover {
+    background: var(--success-hover);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.25);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-pdf {
+    background: var(--danger-color);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.15);
+}
+
+.btn-pdf:hover {
+    background: var(--danger-hover);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.25);
+}
+
+#status {
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    min-height: 20px;
+}

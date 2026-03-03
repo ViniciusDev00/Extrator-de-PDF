@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrator ORFA - NSF</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text-block">
+                <h2>Extrator de ORFA</h2>
+                <p>Processamento Inteligente NSF</p>
+            </div>
+            <div class="logo-container">
+                <img src="Logo_NSF_C.png" alt="Logo Empresa" class="company-logo">
+            </div>
+        </div>
+
+        <div class="upload-area">
+            <input type="file" id="pdfInput" accept=".pdf" multiple />
+            <label for="pdfInput" class="upload-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span class="upload-text">Clique para selecionar os PDFs</span>
+                <span class="upload-hint">ou arraste os arquivos aqui</span>
+            </label>
+            <div id="file-list" class="file-list"></div>
+        </div>
+
+        <div class="button-group">
+            <button id="processBtn">Exportar Excel</button>
+            <button id="processPdfBtn" class="btn-pdf">Exportar PDF</button>
+        </div>
+        
+        <div id="status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
